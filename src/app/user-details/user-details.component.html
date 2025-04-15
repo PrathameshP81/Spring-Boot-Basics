@@ -1,0 +1,13 @@
+<div class="employee-card-rectangle">
+  <img class="profile-pic" src="{{ userDetails.profilePic }}" />
+  <div class="employee-details">
+    <h2 style="font-size: 30px">{{ userDetails.name }}</h2>
+    <p><strong>Employee ID:</strong> {{ userDetails.empid }}</p>
+    <p><strong>Email:</strong> {{ userDetails.email }}</p>
+    <p><strong>Salary:</strong> ₹{{ userDetails.salary }}</p>
+    <p><strong>Gender:</strong>{{ userDetails.gender }}</p>
+    <p><strong>Address:</strong> {{ userDetails.address }}</p>
+    <p><strong>Phone Number:</strong>{{ userDetails.phoneNumber }}</p>
+    <p><strong>Department:</strong> {{ userDetails.department?.deptname }}</p>
+  </div>
+</div>

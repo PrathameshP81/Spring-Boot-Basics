@@ -1,0 +1,101 @@
+.card-container {
+    display: flex;
+    margin-top: 50px;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures cards are responsive */
+  }
+  
+  /* Individual cards */
+  .card {
+    width: 250px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid #444;
+    font-size: 1em;
+    color: #333;
+
+  }
+  
+  .card h2 {
+    margin: 0 0 10px;
+    font-size: 1.8em;
+    color: #444;
+  }
+  
+  .card p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #666;
+  }
+
+  .table-container {
+    height: 500px; /* Fixed height for the table container */
+    overflow-y: auto; /* Enables vertical scrolling if rows exceed height */
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 20px;
+    cursor : pointer
+  }
+  
+  /* Styling for the table */
+  .scrollable-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .scrollable-table thead {
+    position: sticky; /* Keeps header sticky during scroll */
+    top: 0;
+    background-color: #333; /* Header background color */
+    color: #fff;
+  }
+  
+  .scrollable-table th,
+  .scrollable-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .scrollable-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+.profilepic{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+.viewbtn{
+  background: rebeccapurple;
+  padding: 10px;
+  width: 70px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+.updatebtn{
+  background: green;
+  padding: 10px;
+  width: 70px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+.deletebtn{
+  background: red;
+  padding: 10px;
+  width: 70px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}

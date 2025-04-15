@@ -1,0 +1,66 @@
+<div class="card-container container">
+  <div class="card">
+    <h2>Employees</h2>
+    <p>{{ employeeCount }}</p>
+  </div>
+  <div class="card">
+    <h2>Departments</h2>
+    <p>{{ departmentCount }}</p>
+  </div>
+  <div class="card">
+    <h2>Date</h2>
+    <p>{{ todaysDate }}</p>
+  </div>
+  <div class="card">
+    <h2>Events</h2>
+    <p>Coming Soon.....</p>
+  </div>
+  <div class="card">
+    <h2>Role</h2>
+    <p>Admin</p>
+  </div>
+</div>
+<div>
+  <h1 class="container" style="margin-top: 20px">Employee Details</h1>
+  <hr class="container" />
+</div>
+<div class="container" style="margin-top: 20px">
+  <div class="table-container">
+    <!-- Only one <table> element -->
+    <table class="scrollable-table">
+      <thead>
+        <tr>
+          <th>Profile</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Phone</th>
+          <th>Department</th>
+          <th>Department Head</th>
+          <th>Operations</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employeeDetails">
+          <td><img class="profilepic" src="{{ employee.profilePic }}" /></td>
+          <td>{{ employee.name }}</td>
+
+          <td>{{ employee.gender }}</td>
+          <td>{{ employee.phoneNumber }}</td>
+          <td>{{ employee.department?.deptname }}</td>
+          <td>{{ employee.department?.deptHead }}</td>
+          <td style="display: flex; justify-content: space-around">
+            <a routerLink="/employee/{{ employee.empid }}" class="viewbtn"
+              >View</a
+            >
+            <a routerLink="/employee/{{ employee.empid }}" class="updatebtn"
+              >Update</a
+            >
+            <button class="deletebtn" (click)="deleteEmployee(employee.empid)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
